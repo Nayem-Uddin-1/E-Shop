@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 /* Using Ionicons from react-icons for a clean, consistent stroke weight */
 import { 
   IoSyncOutline, 
@@ -8,10 +8,18 @@ import {
   IoChevronDownOutline 
 } from 'react-icons/io5';
 import Logo from './Logo';
+import Register from '../../pages/Auth/Register';
 
 const Header = () => {
+    
+    const [openClose,setOpenClose]=useState(false)
+  
+
+    console.log(openClose);
+    
+
   return (
-    <header className="w-full bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
+    <header className="w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
         
         {/* Logo Section */}
@@ -62,12 +70,22 @@ const Header = () => {
           </div>
 
           {/* User Icon */}
-          <div className="group cursor-pointer">
-            <IoPersonOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
+          <div className="group cursor-pointer ">
+            <IoPersonOutline onClick={(()=>setOpenClose(!openClose))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
+
           </div>
+
+          
         </div>
 
       </div>
+
+      
+             {
+             openClose &&
+             <Register />
+             
+             }
     </header>
   );
 };
