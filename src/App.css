@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+
+.scrollbar-thin {
+  scroll-behavior: smooth;
+}

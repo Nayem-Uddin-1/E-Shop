@@ -1,38 +1,63 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 /* Using Ionicons from react-icons for a clean, consistent stroke weight */
-import { 
-  IoSyncOutline, 
-  IoHeartOutline, 
-  IoBagHandleOutline, 
+import {
+  IoSyncOutline,
+  IoHeartOutline,
+  IoBagHandleOutline,
   IoPersonOutline,
-  IoChevronDownOutline 
+  IoChevronDownOutline
 } from 'react-icons/io5';
 import Logo from './Logo';
-import Register from '../../pages/Auth/Register';
 
 const Header = () => {
-    
-    const [openClose,setOpenClose]=useState(false)
-  
 
-    console.log(openClose);
-    
+  const [authOpen, setAuthOpen] = useState(false);
+  const [categoryOpen, setCategoryOpen] = useState(false);
+
+
+  const categoryRef = useRef(null);
+  const authRef = useRef(null);
+
+
+useEffect(() => {
+  const handleClickOutside = (e) => {
+    if (
+      categoryOpen &&
+      categoryRef.current &&
+      !categoryRef.current.contains(e.target)
+    ) {
+      setCategoryOpen(false);
+    }
+
+   
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("click", handleClickOutside);
+  };
+}, [categoryOpen, authOpen]);
+
+
+ 
+   
 
   return (
-    <header className="w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
+    <header  ref={categoryRef}  className="w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        
+
         {/* Logo Section */}
-          <Logo/>
+        <Logo />
 
         {/* Search Bar Container */}
         <div className="hidden lg:flex flex-1 max-w-[700px] h-12 border-2 border-[#FFB433] rounded-sm overflow-hidden">
-          <input 
-            type="text" 
-            placeholder="Search Product..." 
+          <input
+            type="text"
+            placeholder="Search Product..."
             className="flex-1 px-5 outline-none text-sm text-gray-500"
           />
-          
+
           <div className="flex items-center gap-10 px-4 border-l border-gray-200 cursor-pointer group">
             <span className="text-sm text-[#001730] font-medium">All Categories</span>
             <IoChevronDownOutline className="text-gray-400 group-hover:text-[#FFB433] transition-colors" />
@@ -71,21 +96,16 @@ const Header = () => {
 
           {/* User Icon */}
           <div className="group cursor-pointer ">
-            <IoPersonOutline onClick={(()=>setOpenClose(!openClose))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
+            <IoPersonOutline onClick={(() => setAuthOpen(!authOpen))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
 
           </div>
 
-          
+
         </div>
 
       </div>
+    
 
-      
-             {
-             openClose &&
-             <Register />
-             
-             }
     </header>
   );
 };
