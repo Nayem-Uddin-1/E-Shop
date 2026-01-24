@@ -65,7 +65,7 @@ const Navbar = () => {
 
             {
               openCat &&
-              <div className='min-w-60 top-11.5 max-h-[400px] absolute bg-white px-2 overflow-y-auto
+              <div className='min-w-60 z-1000 top-11.5 max-h-[400px] absolute bg-white px-2 overflow-y-auto
                 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200
                 hover:scrollbar-thumb-gray-500 transition-colors'>
                 {categories.map((category, index) => (
