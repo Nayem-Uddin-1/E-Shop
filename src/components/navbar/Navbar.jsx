@@ -23,10 +23,18 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
 
   const products = useSelector((state) => state.product.products)
-  const categories = [...new Set(products.flatMap((p) => p.categories))];
+  const uniqueCategories = [];
 
+  products.forEach((product) => {
 
+    product.categories.forEach((category) => {
 
+      if (!uniqueCategories.includes(category)) {
+        uniqueCategories.push(category);
+      }
+    });
+  });
+ 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -39,11 +47,6 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
-
-
-  console.log("productsss", categories);
-
 
 
   return (
@@ -68,7 +71,7 @@ const Navbar = () => {
               <div className='min-w-60 z-1000 top-11.5 max-h-[400px] absolute bg-white px-2 overflow-y-auto
                 scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200
                 hover:scrollbar-thumb-gray-500 transition-colors'>
-                {categories.map((category, index) => (
+                {uniqueCategories.map((category, index) => (
                   <Link key={index} className='flex items-center gap-5 py-2 relative'>
                     {/* <FcElectronics /> */}
                     <h3>{category}</h3>

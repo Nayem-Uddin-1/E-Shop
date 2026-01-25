@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductsAvailableCount({available}) {
     
-    const total = 30
+    const total = 100
 
     const percentage = Math.min((available / total) * 100, 100);
     return (

@@ -11,8 +11,8 @@ export const Products = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Apple",
     images: [
-      "https://example.com/images/iphone15-pro-1.jpg",
-      "https://example.com/images/iphone15-pro-2.jpg"
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut-300x300.png",
+      "https://shopo.quomodothemes.website/assets/images/product-img-2.jpg"
     ],
     rating: 4.8,
     reviews: [
@@ -38,7 +38,7 @@ export const Products = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Samsung",
     images: [
-      "https://example.com/images/galaxy-s24-ultra-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut3-300x300.png",
       "https://example.com/images/galaxy-s24-ultra-2.jpg"
     ],
     rating: 4.7,
@@ -65,7 +65,7 @@ export const Products = [
     categories: ["Fashion", "Footwear", "Sports Shoes"],
     brand: "Nike",
     images: [
-      "https://example.com/images/nike-pegasus-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut6-300x300.png",
       "https://example.com/images/nike-pegasus-2.jpg"
     ],
     rating: 4.6,
@@ -92,7 +92,7 @@ export const Products = [
     categories: ["Electronics", "Audio", "Headphones"],
     brand: "Sony",
     images: [
-      "https://example.com/images/sony-wh1000xm5-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut5-300x300.png",
       "https://example.com/images/sony-wh1000xm5-2.jpg"
     ],
     rating: 4.9,
@@ -119,7 +119,7 @@ export const Products = [
     categories: ["Electronics", "Computers", "Laptops"],
     brand: "Apple",
     images: [
-      "https://example.com/images/macbook-pro-16-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut2-300x300.png",
       "https://example.com/images/macbook-pro-16-2.jpg"
     ],
     rating: 4.9,
@@ -146,7 +146,7 @@ export const Products = [
     categories: ["Fashion", "Footwear", "Sports Shoes"],
     brand: "Adidas",
     images: [
-      "https://example.com/images/adidas-ultraboost-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut4-300x300.png",
       "https://example.com/images/adidas-ultraboost-2.jpg"
     ],
     rating: 4.7,
@@ -173,7 +173,7 @@ export const Products = [
     categories: ["Electronics", "Computers", "Accessories"],
     brand: "Logitech",
     images: [
-      "https://example.com/images/logitech-mx-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
       "https://example.com/images/logitech-mx-2.jpg"
     ],
     rating: 4.8,
@@ -200,7 +200,7 @@ export const Products = [
     categories: ["Electronics", "Cameras", "Photography"],
     brand: "Canon",
     images: [
-      "https://example.com/images/canon-eos-r6-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
       "https://example.com/images/canon-eos-r6-2.jpg"
     ],
     rating: 4.9,
@@ -227,7 +227,7 @@ export const Products = [
     categories: ["Electronics", "TV & Home Theater", "Televisions"],
     brand: "Samsung",
     images: [
-      "https://example.com/images/samsung-qled-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/ipadgreen-300x300.png",
       "https://example.com/images/samsung-qled-2.jpg"
     ],
     rating: 4.7,
@@ -254,7 +254,7 @@ export const Products = [
     categories: ["Electronics", "Audio", "Speakers"],
     brand: "Bose",
     images: [
-      "https://example.com/images/bose-revolve-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/appipad-300x300.png",
       "https://example.com/images/bose-revolve-2.jpg"
     ],
     rating: 4.8,
@@ -281,7 +281,7 @@ export const Products = [
     categories: ["Electronics", "Computers", "Laptops"],
     brand: "Dell",
     images: [
-      "https://example.com/images/dell-xps-13-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-1-300x300.png",
       "https://example.com/images/dell-xps-13-2.jpg"
     ],
     rating: 4.7,
@@ -308,7 +308,7 @@ export const Products = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Google",
     images: [
-      "https://example.com/images/pixel8-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-300x300.png",
       "https://example.com/images/pixel8-2.jpg"
     ],
     rating: 4.6,
@@ -335,7 +335,7 @@ export const Products = [
     categories: ["Electronics", "Wearables", "Fitness"],
     brand: "Fitbit",
     images: [
-      "https://example.com/images/fitbit-charge6-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-300x300.png",
       "https://example.com/images/fitbit-charge6-2.jpg"
     ],
     rating: 4.5,
@@ -362,7 +362,7 @@ export const Products = [
     categories: ["Electronics", "Gaming", "Consoles"],
     brand: "Sony",
     images: [
-      "https://example.com/images/ps5-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png",
       "https://example.com/images/ps5-2.jpg"
     ],
     rating: 4.9,
@@ -389,7 +389,7 @@ export const Products = [
     categories: ["Electronics", "Smart Home", "Speakers"],
     brand: "Amazon",
     images: [
-      "https://example.com/images/echo-dot-5-1.jpg",
+      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/lgphone-300x300.png",
       "https://example.com/images/echo-dot-5-2.jpg"
     ],
     rating: 4.7,
