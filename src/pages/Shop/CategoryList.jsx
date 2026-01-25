@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
 
-function CategoryList({ prods }) {
+function CategoryList({ prods, selectedCategories, setSelectedCategories }) {
 
 
 

@@ -1,7 +1,7 @@
 export const Products = [
   {
     id: "1",
-    name: "Apple iPhone 15 Pro",
+    name: "Notebook Widescreen",
     slug: "apple-iphone-15-pro",
     description: "Latest Apple iPhone 15 Pro with A17 Bionic chip, 6.1-inch display, and 48MP camera.",
     price: 1200,
@@ -62,7 +62,7 @@ export const Products = [
     discount: 5,
     finalPrice: 142.5,
     stock: 120,
-    categories: ["Fashion", "Footwear", "Sports Shoes"],
+    categories: [ "Electronics"],
     brand: "Nike",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut6-300x300.png",
@@ -89,7 +89,7 @@ export const Products = [
     discount: 20,
     finalPrice: 320,
     stock: 70,
-    categories: ["Electronics", "Audio", "Headphones"],
+    categories: ["Electronics", "Headphones"],
     brand: "Sony",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut5-300x300.png",
@@ -116,7 +116,7 @@ export const Products = [
     discount: 5,
     finalPrice: 3325,
     stock: 20,
-    categories: ["Electronics", "Computers", "Laptops"],
+    categories: ["Electronics", "Computers",],
     brand: "Apple",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut2-300x300.png",
@@ -143,7 +143,7 @@ export const Products = [
     discount: 10,
     finalPrice: 162,
     stock: 100,
-    categories: ["Fashion", "Footwear", "Sports Shoes"],
+    categories: ["Electronics"],
     brand: "Adidas",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut4-300x300.png",
@@ -170,7 +170,7 @@ export const Products = [
     discount: 15,
     finalPrice: 85,
     stock: 60,
-    categories: ["Electronics", "Computers", "Accessories"],
+    categories: ["Electronics",],
     brand: "Logitech",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
@@ -197,7 +197,7 @@ export const Products = [
     discount: 5,
     finalPrice: 2375,
     stock: 15,
-    categories: ["Electronics", "Cameras", "Photography"],
+    categories: ["Electronics",],
     brand: "Canon",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
@@ -224,7 +224,7 @@ export const Products = [
     discount: 10,
     finalPrice: 1080,
     stock: 25,
-    categories: ["Electronics", "TV & Home Theater", "Televisions"],
+    categories: ["Electronics", "Televisions"],
     brand: "Samsung",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/ipadgreen-300x300.png",
@@ -251,7 +251,7 @@ export const Products = [
     discount: 10,
     finalPrice: 270,
     stock: 45,
-    categories: ["Electronics", "Audio", "Speakers"],
+    categories: ["Electronics", "Speakers"],
     brand: "Bose",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/appipad-300x300.png",
@@ -278,7 +278,7 @@ export const Products = [
     discount: 5,
     finalPrice: 1425,
     stock: 35,
-    categories: ["Electronics", "Computers", "Laptops"],
+    categories: ["Electronics",],
     brand: "Dell",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-1-300x300.png",
@@ -332,8 +332,8 @@ export const Products = [
     discount: 5,
     finalPrice: 171,
     stock: 90,
-    categories: ["Electronics", "Wearables", "Fitness"],
-    brand: "Fitbit",
+    categories: ["Electronics",],
+    brand: "Google",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-300x300.png",
       "https://example.com/images/fitbit-charge6-2.jpg"
@@ -359,7 +359,7 @@ export const Products = [
     discount: 0,
     finalPrice: 500,
     stock: 25,
-    categories: ["Electronics", "Gaming", "Consoles"],
+    categories: ["Electronics",],
     brand: "Sony",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png",
@@ -386,7 +386,7 @@ export const Products = [
     discount: 10,
     finalPrice: 54,
     stock: 80,
-    categories: ["Electronics", "Smart Home", "Speakers"],
+    categories: ["Electronics", "Speakers"],
     brand: "Amazon",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/lgphone-300x300.png",
