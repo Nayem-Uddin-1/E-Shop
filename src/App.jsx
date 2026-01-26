@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Layout from './layout/Layout'
 import Shop from './pages/Shop/Shop'
+import AddToCart from './pages/Cart/AddToCart'
+ 
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +21,7 @@ function App() {
           <Route path='/' element={<Layout/>} >
              <Route index element={<Home/>} />
              <Route path='/shop' element={<Shop/>} />
+             <Route path='/carts' element={<AddToCart/>} />
 
           </Route>
         </Routes>

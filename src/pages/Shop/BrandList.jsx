@@ -2,7 +2,7 @@ import React from 'react'
 
 function BrandList({ prods }) {
 
-    console.log("heiiii", prods);
+ 
 
     return (
         <>

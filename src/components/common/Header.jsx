@@ -8,6 +8,8 @@ import {
   IoChevronDownOutline
 } from 'react-icons/io5';
 import Logo from './Logo';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 
@@ -40,7 +42,9 @@ useEffect(() => {
 }, [categoryOpen, authOpen]);
 
 
+const cartProds = useSelector((state=> state.cart.cartItems))
  
+   
    
 
   return (
@@ -88,10 +92,12 @@ useEffect(() => {
 
           {/* Cart Icon */}
           <div className="relative group cursor-pointer">
+            <Link to={"/carts"} >
             <IoBagHandleOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
-              15
+             {cartProds.length}
             </span>
+            </Link>
           </div>
 
           {/* User Icon */}
