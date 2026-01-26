@@ -4,6 +4,11 @@ import { HiX } from 'react-icons/hi';
 import Container from '../../components/common/container/Container';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCartItems } from '../../redux/cartSlice';
+import { ToastContainer, toast, Bounce } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import CartSubtotal from './CartSubtotal';
+
+
 
 
 
@@ -41,13 +46,23 @@ function AddToCart() {
     const handleRemove = (id) => {
         const updatedCart = cartProds.filter((item) => item.id !== id);
         dispatch(setCartItems(updatedCart));
+        toast.error('cart deleted successfully', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            transition: Bounce,
+        });
     };
 
     return (
         <Container>
             <table className='w-full' >
-
-
+                <ToastContainer />
                 <thead>
                     <tr className="border-b border-gray-200 text-xs font-bold uppercase tracking-wider text-gray-500">
                         <th className="py-4 px-2 text-left w-1/3 text-center">Product</th>
@@ -76,7 +91,7 @@ function AddToCart() {
                                 <div className="flex items-center gap-4">
                                     <div className="w-40 h-30 border border-gray-200  shrink-0">
                                         <img
-                                            src={item.images?.[0] || "/placeholder.png"} 
+                                            src={item.images?.[0] || "/placeholder.png"}
                                             alt={item.name}
                                             className="w-full h-full object-contain"
                                         />
@@ -131,7 +146,7 @@ function AddToCart() {
 
                             {/* Remove */}
                             <td className="py-6 px-2 text-center relative">
-                                <button onClick={()=>handleRemove(item.id)} className="border p-2 cursor-pointer rounded bg-gray-800 text-white relative group">
+                                <button onClick={() => handleRemove(item.id)} className="border p-2 cursor-pointer rounded bg-gray-800 text-white relative group">
                                     <HiX size={20} />
                                     <div className="absolute -right-10 -top-10 border py-1 px-2 rounded text-sm text-black bg-red-600 text-white hidden group-hover:block">
                                         delete
@@ -146,6 +161,8 @@ function AddToCart() {
 
 
             </table>
+
+            <CartSubtotal/>
 
 
         </Container>
