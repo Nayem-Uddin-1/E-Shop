@@ -1,5 +1,8 @@
 // CartSummary.jsx
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setOrderData } from "../../redux/orderSlice";
+import { useNavigate } from "react-router-dom";
 
 
 function CartSubtotal() {
@@ -7,8 +10,23 @@ function CartSubtotal() {
   const [country, setCountry] = useState("");
   const [zip, setZip] = useState("");
 
-  const subtotal = 365;
-  const total = subtotal + shipping;
+
+  const dispatch = useDispatch()
+  const navigate=useNavigate()
+  const cartItems = useSelector(
+    (state) => state.cart.cartItems
+  );
+
+
+  const subtotal = cartItems.reduce((sum, item) => {
+    return sum + item.price * item.quantity;
+  }, 0);
+
+
+  const GrandTotal = subtotal + shipping;
+
+
+
 
   const handleShippingChange = (e) => {
     const value = Number(e.target.value);
@@ -18,6 +36,29 @@ function CartSubtotal() {
   const handleUpdateCart = () => {
     alert(`Shipping updated for ${country}, ZIP: ${zip}`);
   };
+
+
+  const handleCheckout = () => {
+
+     if (cartItems.length === 0) {
+      alert("Cart is empty");
+      return;
+    }
+
+    const orderData = {
+      items: cartItems,
+      subtotal,
+      // shipping,
+      // tax,
+      total: GrandTotal,
+      status: "pending",
+    };
+
+    dispatch(setOrderData(orderData))
+     navigate("/checkout");  
+    console.log("checkout");
+
+  }
 
   return (
     <div className="max-w-sm w-full border p-6 rounded shadow-md space-y-6 ml-auto">
@@ -94,10 +135,10 @@ function CartSubtotal() {
 
       <div className="flex justify-between font-semibold text-red-500 text-lg">
         <span>Total</span>
-        <span>${total}</span>
+        <span>${GrandTotal}</span>
       </div>
 
-      <button className="w-full bg-black text-white py-3 rounded hover:bg-gray-900 transition">
+      <button onClick={handleCheckout} className="w-full bg-black text-white py-3 rounded hover:bg-gray-900 transition">
         Proceed to Checkout
       </button>
     </div>
@@ -105,4 +146,4 @@ function CartSubtotal() {
 }
 
 
-export default  CartSubtotal;
+export default CartSubtotal;
