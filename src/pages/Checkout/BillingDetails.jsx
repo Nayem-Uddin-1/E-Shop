@@ -12,7 +12,7 @@ function BillingDetails() {
         const selectedCountry = e.target.value;
         setCountry(selectedCountry);
         setCities(countryCityData[selectedCountry] || []);
-        setCity(""); // reset city
+        setCity(""); 
     };
 
     return (

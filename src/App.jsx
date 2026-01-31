@@ -6,6 +6,7 @@ import Layout from './layout/Layout'
 import Shop from './pages/Shop/Shop'
 import AddToCart from './pages/Cart/AddToCart'
 import Checkout from './pages/Checkout/Checkout'
+import SingleProductDetails from './pages/ProductPage/SingleProduct/SingleProductDetails'
  
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
              <Route path='/shop' element={<Shop/>} />
              <Route path='/carts' element={<AddToCart/>} />
              <Route path='/checkout' element={<Checkout/>} />
+             <Route path='/product/:slug' element={<SingleProductDetails/>} />
 
           </Route>
         </Routes>

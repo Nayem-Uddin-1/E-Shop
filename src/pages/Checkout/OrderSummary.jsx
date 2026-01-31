@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaRegCircle, FaCheckCircle } from 'react-icons/fa';
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+
 import { useSelector } from 'react-redux';
 
 const OrderSummary = () => {
@@ -11,10 +13,10 @@ const OrderSummary = () => {
         { id: 3, name: 'Apple Watch', qty: 1, specs: '64GB, Black, 44mm, Chain Belt', price: 38 },
     ];
 
-    const cartCheckout=useSelector((state=>state.order.orderData))
+    const cartCheckout = useSelector((state => state.order.orderData))
 
-    console.log("order list",cartCheckout);
-    
+    console.log("order list", cartCheckout);
+
 
     return (
         <div className="max-w-[553px]">
@@ -29,13 +31,29 @@ const OrderSummary = () => {
 
             {/* Product List */}
             <div className="space-y-6 mb-8">
-                {products.map((item) => (
+                {cartCheckout.items.map((item) => (
                     <div key={item.id} className="flex justify-between items-start">
-                        <div>
-                            <h3 className="text-gray-700 font-medium">
-                                {item.name} <span className="text-blue-400 text-sm ml-1 font-normal">x{item.qty}</span>
-                            </h3>
-                            <p className="text-xs text-gray-400 mt-1">{item.specs}</p>
+                        <div className='flex gap-5 items-center'>
+                            <div className='border w-25 h-25' >
+                                <img src={item.images[0]}
+                                    alt="" className='w-full' />
+                            </div>
+                            <div>
+                                <h3 className="text-gray-700 font-medium">
+                                    {item.name} <span className="text-blue-400 text-sm ml-1 font-normal">x{item.qty}</span>
+                                </h3>
+                                <div className='flex items-center gap-2'>
+                                    <div className="flex items-center gap-1 text-yellow-400">
+                                        <FaStar />
+                                        <FaStar />
+                                        <FaStar />
+                                        <FaStar />
+                                        <FaStarHalfAlt />
+                                    </div>
+                                    <h2 className='text-gray-500'>({item.rating}) </h2>
+                                </div>
+
+                            </div>
                         </div>
                         <span className="font-semibold text-gray-700">${item.price}</span>
                     </div>
@@ -48,7 +66,7 @@ const OrderSummary = () => {
             <div className="space-y-4 text-sm">
                 <div className="flex justify-between items-center font-bold text-gray-600">
                     <span className="uppercase tracking-tight">Subtotal</span>
-                    <span>$365</span>
+                    <span>{cartCheckout.subtotal}</span>
                 </div>
 
                 <div className="space-y-1">
@@ -65,7 +83,7 @@ const OrderSummary = () => {
             {/* Total Section */}
             <div className="flex justify-between items-center mb-8">
                 <h2 className="text-2xl font-bold">Total</h2>
-                <span className="text-2xl font-bold text-red-500">$365</span>
+                <span className="text-2xl font-bold text-red-500">{cartCheckout.subtotal} </span>
             </div>
 
             {/* Payment Methods */}

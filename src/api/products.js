@@ -12,7 +12,7 @@ export const Products = [
     brand: "Apple",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut-300x300.png",
-      "https://shopo.quomodothemes.website/assets/images/product-img-2.jpg"
+      "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-2.jpg"
     ],
     rating: 4.8,
     reviews: [

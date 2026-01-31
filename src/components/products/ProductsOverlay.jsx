@@ -60,8 +60,7 @@ function ProductsOverlay({ prods }) {
             navigate("/carts");
         }, 2000)
 
-        console.log("updates ", updatedCart);
-
+ 
     };
     return (
         <div>
@@ -76,7 +75,9 @@ function ProductsOverlay({ prods }) {
           transition-all duration-500 ease-out text-5xl
         "
             >
-                <Link className="w-10 h-10 bg-gray-200 flex justify-center items-center rounded hover:bg-black hover:text-white transition">
+                <Link 
+                to={`product/${prods.slug}`}
+                className="w-10 h-10 bg-gray-200 flex justify-center items-center rounded hover:bg-black hover:text-white transition">
                     <LuFullscreen />
                 </Link>
 
