@@ -10,67 +10,67 @@ import 'react-toastify/dist/ReactToastify.css';
 function RightSide({ product }) {
 
 
-    const [selectedImage, setSelectedImage] = useState(product.images[0]);
+  const [selectedImage, setSelectedImage] = useState(product.images[0]);
 
-    const dispatch = useDispatch()
-    const navigate = useNavigate();
-    
-    const cartItems = useSelector(
-        (state) => state.cart.cartItems
+  const dispatch = useDispatch()
+  const navigate = useNavigate();
+
+  const cartItems = useSelector(
+    (state) => state.cart.cartItems
+  );
+
+
+  const handleAddToCart = () => {
+
+    const existingItem = cartItems.find(
+      (item) => item.id === product.id
     );
 
+    let updatedCart;
 
-    const handleAddToCart = () => {
+    if (existingItem) {
+      updatedCart = cartItems.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+    } else {
+      updatedCart = [
+        ...cartItems,
+        { ...product, quantity: 1 },
+      ];
+    }
 
-        const existingItem = cartItems.find(
-            (item) => item.id === product.id
-        );
+    dispatch(setCartItems(updatedCart));
 
-        let updatedCart;
+    toast.success('Added to cart!', {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
 
-        if (existingItem) {
-            updatedCart = cartItems.map((item) =>
-                item.id === product.id
-                    ? { ...item, quantity: item.quantity + 1 }
-                    : item
-            );
-        } else {
-            updatedCart = [
-                ...cartItems,
-                { ...product, quantity: 1 },
-            ];
-        }
-
-        dispatch(setCartItems(updatedCart));
-
-            toast.success('Added to cart!', {
-            position: "top-center",
-            autoClose: 1000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-            transition: Bounce,
-        });
-
-        setTimeout(() => {
-            navigate("/carts");
-        }, 2000)
-
-        
- 
-    };
+    setTimeout(() => {
+      navigate("/carts");
+    }, 2000)
 
 
- 
 
-    return (
-         <div >
-      
-     
-            <ToastContainer />
+  };
+
+
+
+
+  return (
+    <div >
+
+
+      <ToastContainer />
 
       {/* Right side: Product Info */}
       <div className="flex-1 flex flex-col gap-4">
@@ -81,11 +81,10 @@ function RightSide({ product }) {
           {Array.from({ length: 5 }, (_, i) => (
             <FaStar
               key={i}
-              className={`${
-                i < Math.floor(product.rating)
+              className={`${i < Math.floor(product.rating)
                   ? "text-yellow-400"
                   : "text-gray-300"
-              }`}
+                }`}
             />
           ))}
           <span className="text-gray-500">{product.rating} / 5</span>
@@ -122,9 +121,9 @@ function RightSide({ product }) {
         </div>
 
         {/* Add to Cart */}
-        <button 
-        onClick={handleAddToCart}
-        className="bg-[#F0A92E] hover:bg-[#F0A92E] text-white font-semibold py-3 px-6 transition w-2/4">
+        <button
+          onClick={handleAddToCart}
+          className="bg-[#F0A92E] cursor-pointer hover:bg-[#F0A92E] text-white font-semibold py-3 px-6 transition w-2/4">
           Add to Cart
         </button>
 
@@ -138,9 +137,8 @@ function RightSide({ product }) {
                 {Array.from({ length: 5 }, (_, i) => (
                   <FaStar
                     key={i}
-                    className={`${
-                      i < Math.floor(review.rating) ? "text-yellow-400" : "text-gray-300"
-                    }`}
+                    className={`${i < Math.floor(review.rating) ? "text-yellow-400" : "text-gray-300"
+                      }`}
                   />
                 ))}
                 <span className="text-gray-500 text-sm">{review.rating}</span>
@@ -151,7 +149,7 @@ function RightSide({ product }) {
         </div>
       </div>
     </div>
-    )
+  )
 }
 
 export default RightSide

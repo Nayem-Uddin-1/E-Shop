@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import RightSide from './RightSide';
 import Container from '../../../components/common/container/Container';
 import LeftSide from './LeftSide';
+import TabDetails from './TabDetails';
 
 function SingleProductDetails() {
 
@@ -27,6 +28,10 @@ function SingleProductDetails() {
         <RightSide product={product} />
 
         </div>
+
+         <TabDetails/>
+
+
 
 
 

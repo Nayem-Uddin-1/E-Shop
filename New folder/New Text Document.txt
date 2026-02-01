@@ -1,6 +1,6 @@
-Home page
+Home page --------------------------
 
-Shop / Products listing page
+Shop / Products listing page ----------------------
 
 Product details page ---------------
 
@@ -18,16 +18,11 @@ Register / Sign-up page
 
 User dashboard / My account
 
-Order history page
-
 Wishlist page
 
-Payment success / failure page
-
-Address management page
-
-Profile settings page
-
+Payment success / failure page --------------------
+ 
+----------------------------------------
 About us page
 
 Contact us page
@@ -37,11 +32,3 @@ FAQ page
 Terms & conditions page
 
 Privacy policy page
-
-Admin dashboard
-
-Admin product management page
-
-Admin order management page
-
-Admin user management page
