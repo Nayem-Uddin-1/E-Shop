@@ -4,16 +4,20 @@ import img_one from "../../assets/images/imgi_3_product_img_1.jpg"
 import ProductsAvailableCount from './ProductsAvailableCount';
 
 import ProductsOverlay from './ProductsOverlay';
+import { Link } from 'react-router-dom';
 
 
 
-function Products({ prods }) {
+function Products({ prods ,type }) {
 
   const [available, setAvailable] = useState(true)
 
+   console.log("sluggggiiii",prods[0].slug);
+   
 
   return (
-    <div className='grid grid-cols-3 gap-10   '>
+    <div className={`grid lg:grid-cols-3 gap-10 sm:grid-cols-1  md:grid-cols-2  
+    ${type === "related" ? "lg:grid-cols-4" : ""} `}>
       {
         prods?.map((item, i) => (
 
@@ -39,7 +43,7 @@ function Products({ prods }) {
                 <FaStar className="text-yellow-500" />
                 {item.rating}
               </div>
-              <p className="text-sm">{item.name}</p>
+              <Link to={`/product/${item.slug}`} target='_black' className="text-sm font-bold hover:text-blue-700 cursor-pointer ">{item.name}</Link>
               <div className="flex gap-3 font-bold">
                 <del className="text-gray-400">{item.price}</del>
                 <span>{item.finalPrice}</span>

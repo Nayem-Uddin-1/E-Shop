@@ -7,6 +7,8 @@ import {
   IoPersonOutline,
   IoChevronDownOutline
 } from 'react-icons/io5';
+import { FaBars } from "react-icons/fa6";
+
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -21,35 +23,38 @@ const Header = () => {
   const authRef = useRef(null);
 
 
-useEffect(() => {
-  const handleClickOutside = (e) => {
-    if (
-      categoryOpen &&
-      categoryRef.current &&
-      !categoryRef.current.contains(e.target)
-    ) {
-      setCategoryOpen(false);
-    }
-
-   
-  };
-
-  document.addEventListener("mousedown", handleClickOutside);
-
-  return () => {
-    document.removeEventListener("click", handleClickOutside);
-  };
-}, [categoryOpen, authOpen]);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        categoryOpen &&
+        categoryRef.current &&
+        !categoryRef.current.contains(e.target)
+      ) {
+        setCategoryOpen(false);
+      }
 
 
-const cartProds = useSelector((state=> state.cart.cartItems))
- 
-   
-   
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [categoryOpen, authOpen]);
+
+
+  const cartProds = useSelector((state => state.cart.cartItems))
+
+
+
 
   return (
-    <header  ref={categoryRef}  className="w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
+    <header ref={categoryRef} className="max-w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+
+        <FaBars />
+
 
         {/* Logo Section */}
         <Logo />
@@ -75,7 +80,7 @@ const cartProds = useSelector((state=> state.cart.cartItems))
         {/* Icons Group */}
         <div className="flex items-center gap-8">
           {/* Refresh Icon */}
-          <div className="relative group cursor-pointer">
+          <div className="relative group cursor-pointer sm:hidden md:block">
             <IoSyncOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
               2
@@ -83,7 +88,7 @@ const cartProds = useSelector((state=> state.cart.cartItems))
           </div>
 
           {/* Wishlist Icon */}
-          <div className="relative group cursor-pointer">
+          <div className="relative group cursor-pointer sm:hidden md:block ">
             <IoHeartOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
               1
@@ -93,15 +98,15 @@ const cartProds = useSelector((state=> state.cart.cartItems))
           {/* Cart Icon */}
           <div className="relative group cursor-pointer">
             <Link to={"/carts"} >
-            <IoBagHandleOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
-            <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
-             {cartProds.length}
-            </span>
+              <IoBagHandleOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
+              <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
+                {cartProds.length}
+              </span>
             </Link>
           </div>
 
           {/* User Icon */}
-          <div className="group cursor-pointer ">
+          <div className="group cursor-pointer sm:hidden md:block ">
             <IoPersonOutline onClick={(() => setAuthOpen(!authOpen))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
 
           </div>
@@ -110,7 +115,7 @@ const cartProds = useSelector((state=> state.cart.cartItems))
         </div>
 
       </div>
-    
+
 
     </header>
   );

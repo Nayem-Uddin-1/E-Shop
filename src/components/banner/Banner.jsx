@@ -7,7 +7,7 @@ import FeaturesBar from "./FeaturesBar";
 
 export default function Banner() {
   return (
-    <section className="w-full border py-10">
+    <section className="w-full py-10">
       <div className="max-w-7xl h-[500px] grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* Left Large Card */}

@@ -52,7 +52,7 @@ const Navbar = () => {
   return (
     <section className='bg-[#FFB82E]'>
       <Container>
-        <nav className=" w-full py-3 flex items-center justify-between font-sans">
+        <nav className=" w-full py-3 flex items-center justify-between font-sans sm:hidden md:block ">
           {/* Left Section: Categories Dropdown */}
           <div ref={dropdownRef} className="flex items-center space-x-8 relative">
 

@@ -4,8 +4,8 @@ import { MdOutlineEmojiEvents } from 'react-icons/md';
 
 const FeaturesBar = () => {
   return (
-    <div className="w-full bg-white py-10 px-6 mt-10">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-6">
+    <div className="max-w-full bg-white py-10 px-6 mt-10 ">
+      <div className="max-w-7xl mx-auto flex  sm:flex-col sm:items-center md:items-center   sm:gap-20 sm:p-10 md:flex-col lg:flex-row flex-wrap justify-between gap-6">
         
         {/* Free Shipping */}
         <div className="flex items-center gap-4 min-w-[200px]">

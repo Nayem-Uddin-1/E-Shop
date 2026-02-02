@@ -67,7 +67,7 @@ function ProductsOverlay({ prods }) {
             <ToastContainer />
 
             <div
-                className="
+                className=" 
           flex flex-col gap-3 text-[10px]
           absolute top-20 -right-14
           opacity-0 translate-x-6

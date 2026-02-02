@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Desc from './Tabs/Desc';
+import Container from '../../../components/common/container/Container';
 
 function TabDetails() {
 
@@ -24,7 +25,7 @@ function TabDetails() {
 
 
     return (
-        <div>
+        <Container>
             <div className='flex gap-5 text-gray-600 font-bold ' >
                 {
                     tabData.map((item, i) => (
@@ -49,7 +50,7 @@ function TabDetails() {
 
 
 
-        </div>
+        </Container>
     )
 }
 

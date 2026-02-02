@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa";
+import Container from '../../../components/common/container/Container';
 
 
 function LeftSide({product}) {
         const [selectedImage, setSelectedImage] = useState(product.images[0]);
     
   return (
-    <div>
+    <Container>
          {/* Left side: Images */}
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="flex flex-col gap-2">
@@ -30,7 +31,7 @@ function LeftSide({product}) {
                   />
                 </div>
               </div>
-    </div>
+    </Container>
   )
 }
 

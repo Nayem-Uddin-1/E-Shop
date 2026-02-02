@@ -5,6 +5,7 @@ import { setCartItems } from '../../../redux/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Container from '../../../components/common/container/Container';
 
 
 function RightSide({ product }) {
@@ -67,7 +68,7 @@ function RightSide({ product }) {
 
 
   return (
-    <div >
+    <Container >
 
 
       <ToastContainer />
@@ -148,7 +149,7 @@ function RightSide({ product }) {
           ))}
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 
