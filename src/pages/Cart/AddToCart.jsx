@@ -7,6 +7,7 @@ import { setCartItems } from '../../redux/cartSlice';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CartSubtotal from './CartSubtotal';
+import { Link } from 'react-router-dom';
 
 
 
@@ -21,7 +22,7 @@ function AddToCart() {
 
     const cartProds = useSelector((state => state.cart.cartItems))
 
-    console.log("cart items", cartProds);
+    console.log("cart items", cartProds.length);
 
 
     const handleIncrease = (id) => {
@@ -75,16 +76,9 @@ function AddToCart() {
                     </tr>
                 </thead>
                 <tbody>
-                    {cartProds.length === 0 && (
-                        <tr>
-                            <td colSpan="7" className="py-10 text-center text-gray-400">
-                                Cart is empty
-                            </td>
-                        </tr>
-                    )}
 
                     {cartProds.map((item) => (
-                        <tr key={item.id} className="border-b border-gray-100">
+                        <tr key={item.id} className="border border-gray-300">
 
                             {/* Product */}
                             <td className="py-6 px-2">
@@ -146,7 +140,7 @@ function AddToCart() {
 
                             {/* Remove */}
                             <td className="py-6 px-2 text-center relative">
-                                <button onClick={() => handleRemove(item.id)} className="border p-2 cursor-pointer rounded bg-gray-800 text-white relative group">
+                                <button onClick={() => handleRemove(item.id)} className="p-2 cursor-pointer bg-gray-300 text-black relative group">
                                     <HiX size={20} />
                                     <div className="absolute -right-10 -top-10 border py-1 px-2 rounded text-sm text-black bg-red-600 text-white hidden group-hover:block">
                                         delete
@@ -162,7 +156,27 @@ function AddToCart() {
 
             </table>
 
-            <CartSubtotal/>
+
+            <div className='mt-20'>
+                {
+                cartProds.length > 0 && <CartSubtotal />
+
+
+
+            }
+            </div>
+
+           <div className='flex justify-center items-center mt-20'>
+              {cartProds.length === 0 && (
+                <div className='flex flex-col items-center justify-center '>
+                    <span className='text-gray-600 '>There are no items in this cart</span>
+                    <Link to={"/"} className='text-2xl p-5 mt-10 border text-orange-600 ' >Continue Shoping</Link>
+                
+                </div>
+            )}
+           </div>
+
+
 
 
         </Container>
