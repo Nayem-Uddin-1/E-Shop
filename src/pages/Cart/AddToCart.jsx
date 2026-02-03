@@ -8,6 +8,7 @@ import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CartSubtotal from './CartSubtotal';
 import { Link } from 'react-router-dom';
+import Breadcrumbs from '../Shop/Breadcrumbs';
 
 
 
@@ -62,10 +63,15 @@ function AddToCart() {
 
     return (
         <Container>
+            <ToastContainer />
+           <Breadcrumbs data={"Cart"} />
+           <div>
+            <h1 className='text-3xl text-orange-600 text-center my-10'>Your Carts</h1>
+           </div>
             <table className='w-full' >
-                <ToastContainer />
+
                 <thead>
-                    <tr className="border-b border-gray-200 text-xs font-bold uppercase tracking-wider text-gray-500">
+                    <tr className="border border-gray-300 text-xs font-bold uppercase tracking-wider text-gray-500">
                         <th className="py-4 px-2 text-left w-1/3 text-center">Product</th>
                         <th className="py-4 px-2 text-center">Color</th>
                         <th className="py-4 px-2 text-center">Size</th>
@@ -78,12 +84,12 @@ function AddToCart() {
                 <tbody>
 
                     {cartProds.map((item) => (
-                        <tr key={item.id} className="border border-gray-300">
+                        <tr key={item.id} className="border bg-white hover:bg-[#F8F8F8] border-gray-300">
 
                             {/* Product */}
                             <td className="py-6 px-2">
                                 <div className="flex items-center gap-4">
-                                    <div className="w-40 h-30 border border-gray-200  shrink-0">
+                                    <div className="w-40 h-30 bg-white border border-gray-200  shrink-0">
                                         <img
                                             src={item.images?.[0] || "/placeholder.png"}
                                             alt={item.name}

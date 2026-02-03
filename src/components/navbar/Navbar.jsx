@@ -3,7 +3,6 @@ import { HiMenuAlt2 } from 'react-icons/hi';
 import { FiChevronDown, FiChevronRight } from 'react-icons/fi';
 import Container from '../common/container/Container';
 import { Link } from 'react-router-dom';
-import { FcElectronics } from "react-icons/fc";
 import { MdChevronRight } from "react-icons/md";
 import { useSelector } from 'react-redux';
 

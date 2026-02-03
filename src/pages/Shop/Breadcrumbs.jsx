@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 function Breadcrumbs({data}) {
   return (
-    <div className='flex  items-center  gap-5 pt-10 ml-5 mb-5 font-bold text-[25px]'>
-      <Link className=''>
+    <div className='flex  items-center  gap-2 my-10 text-[16px]'>
+      <Link to={"/"} className='text-orange-600'>
         Home
       </Link>
-      <Link>
+      <span>/</span>
+      <Link to={"/carts"} className='text-orange-600' >
       {data}
       </Link>
     </div>
