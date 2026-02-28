@@ -53,9 +53,7 @@ const Header = () => {
     <header ref={categoryRef} className="max-w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-        <FaBars />
-
-
+        <FaBars className='hidden' />
         {/* Logo Section */}
         <Logo />
 

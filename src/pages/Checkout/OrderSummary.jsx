@@ -6,12 +6,7 @@ import { useSelector } from 'react-redux';
 
 const OrderSummary = () => {
     const [paymentMethod, setPaymentMethod] = useState('bank');
-
-    const products = [
-        { id: 1, name: 'Apple Watch', qty: 1, specs: '64GB, Black, 44mm, Chain Belt', price: 38 },
-        { id: 2, name: 'Apple Watch', qty: 1, specs: '64GB, Black, 44mm, Chain Belt', price: 38 },
-        { id: 3, name: 'Apple Watch', qty: 1, specs: '64GB, Black, 44mm, Chain Belt', price: 38 },
-    ];
+ 
 
     const cartCheckout = useSelector((state => state.order.orderData))
 

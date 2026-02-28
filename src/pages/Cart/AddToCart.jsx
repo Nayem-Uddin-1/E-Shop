@@ -72,7 +72,7 @@ function AddToCart() {
 
                 <thead>
                     <tr className="border border-gray-300 text-xs font-bold uppercase tracking-wider text-gray-500">
-                        <th className="py-4 px-2 text-left w-1/3 text-center">Product</th>
+                        <th className="py-4 px-2 w-1/3 text-center">Product</th>
                         <th className="py-4 px-2 text-center">Color</th>
                         <th className="py-4 px-2 text-center">Size</th>
                         <th className="py-4 px-2 text-center">Price</th>

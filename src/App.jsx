@@ -7,19 +7,18 @@ import Shop from './pages/Shop/Shop'
 import AddToCart from './pages/Cart/AddToCart'
 import Checkout from './pages/Checkout/Checkout'
 import SingleProductDetails from './pages/ProductPage/SingleProduct/SingleProductDetails'
+import AuthPage from './pages/Auth/AuthPage'
+ 
  
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-
-    <>
-
- 
-
+    <> 
       <BrowserRouter>
         <Routes>
+             <Route path='/signup' element={<AuthPage/>} />
           <Route path='/' element={<Layout/>} >
              <Route index element={<Home/>} />
              <Route path='/shop' element={<Shop/>} />
@@ -30,8 +29,6 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-
-
     </>
   )
 }
