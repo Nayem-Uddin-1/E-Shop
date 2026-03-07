@@ -16,10 +16,11 @@ function GamerWorld() {
 
     let visibleProducts = prods;
 
-    if (screenWidth < 1024) {
-        visibleProducts = prods.slice(0, 2);  
-    }
-
+  if (screenWidth < 1024) {
+    visibleProducts = prods.slice(0, 2);  
+} else {
+    visibleProducts = prods.slice(0, 3);
+}
 
     return (
         <div>
@@ -42,7 +43,7 @@ function GamerWorld() {
                     </div>
                 </div>
 
-                <Products prods={prods} />
+                <Products prods={visibleProducts} />
             </div>
 
 
