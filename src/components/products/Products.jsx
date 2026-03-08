@@ -50,7 +50,7 @@ function Products({ prods ,type }) {
               </div>
             </div>
             {/* Overlay */}
-            <ProductsOverlay prods={item} />
+            <ProductsOverlay prods={item} type={type} />
           </div>
         ))
 

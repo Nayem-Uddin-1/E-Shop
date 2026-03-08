@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function ProductsOverlay({ prods }) {
+function ProductsOverlay({ prods ,type}) {
 
     const dispatch = useDispatch()
     const navigate = useNavigate();
@@ -77,16 +77,16 @@ function ProductsOverlay({ prods }) {
             >
                 <Link 
                 to={`product/${prods.slug}`}
-                className="w-10 h-10 bg-gray-200 flex justify-center items-center rounded hover:bg-black hover:text-white transition">
-                    <LuFullscreen />
+                className="w-12 h-12 bg-gray-50 border border-gray-500 flex justify-center items-center rounded   transition">
+                    <LuFullscreen className='text-xl' />
                 </Link>
 
-                <Link className="w-10 h-10 bg-gray-200 flex justify-center items-center rounded hover:bg-black hover:text-white transition">
-                    <FaRegHeart />
+                <Link className="w-12 h-12 bg-gray-50 border border-gray-500 flex justify-center items-center rounded   transition">
+                    <FaRegHeart className='text-xl' />
                 </Link>
 
-                <Link className="w-10 h-10 bg-gray-200 flex justify-center items-center rounded hover:bg-black hover:text-white transition">
-                    <FaCodeCompare />
+                <Link className="w-12 h-12 bg-gray-50 border border-gray-500 flex justify-center items-center rounded   transition">
+                    <FaCodeCompare className='text-xl' />
                 </Link>
             </div>
 

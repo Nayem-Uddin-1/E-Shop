@@ -13,16 +13,19 @@ function SingleProductDetails() {
   const prods = useSelector((state => state.product.products))
   const product = prods.find(item => item.slug === slug)
 
+    if (!product) {
+    return <h2 className="text-center py-20">Loading...</h2>;
+  }
+
+
     
     
   return (
     <div>
 
-      <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10">
-
+       <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row gap-10">
         <LeftSide product={product} />
         <RightSide product={product} />
-
       </div>
 
       <TabDetails />
