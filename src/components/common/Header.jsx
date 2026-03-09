@@ -7,7 +7,8 @@ import {
   IoPersonOutline,
   IoChevronDownOutline
 } from 'react-icons/io5';
-import { FaBars } from "react-icons/fa6";
+import { FaBarsStaggered } from "react-icons/fa6";
+
 
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
@@ -53,7 +54,8 @@ const Header = () => {
     <header ref={categoryRef} className="max-w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-        <FaBars className='hidden' />
+             
+          <FaBarsStaggered className='md:hidden'/>
         {/* Logo Section */}
         <Logo />
 
@@ -77,8 +79,10 @@ const Header = () => {
 
         {/* Icons Group */}
         <div className="flex items-center gap-8">
+
+
           {/* Refresh Icon */}
-          <div className="relative group cursor-pointer sm:hidden md:block">
+          <div className="relative group cursor-pointer hidden md:block">
             <IoSyncOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
               2
@@ -86,7 +90,7 @@ const Header = () => {
           </div>
 
           {/* Wishlist Icon */}
-          <div className="relative group cursor-pointer sm:hidden md:block ">
+          <div className="relative group cursor-pointer hidden md:block ">
             <IoHeartOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
               1
@@ -104,9 +108,8 @@ const Header = () => {
           </div>
 
           {/* User Icon */}
-          <div className="group cursor-pointer sm:hidden md:block ">
+          <div className="group cursor-pointer hidden md:block ">
             <IoPersonOutline onClick={(() => setAuthOpen(!authOpen))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
-
           </div>
 
 

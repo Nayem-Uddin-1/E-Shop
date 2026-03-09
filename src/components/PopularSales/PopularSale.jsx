@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 
 
-function GamerWorld() {
+function PopularSale() {
 
     const prods = useSelector((state => state.product.products))
 
@@ -26,7 +26,7 @@ function GamerWorld() {
         <div>
 
             <div className='my-5 flex justify-between '>
-                <h2 className='text-3xl font-bold ' >Gamer World</h2>
+                <h2 className='text-3xl font-bold ' >Popular Sale</h2>
                 <Link to={"/shop"} target="_blank" className='flex justify-center gap-3 items-center  font-bold ' >
                 <span className="text-red-500 underline">
                 View More
@@ -36,8 +36,8 @@ function GamerWorld() {
                  <FaLongArrowAltRight /> </Link>
             </div>
 
-            <div className='  ' >
-                 
+            <div className='flex justify-between gap-10  ' >
+              
 
                 <Products prods={visibleProducts} />
             </div>
@@ -47,4 +47,4 @@ function GamerWorld() {
     )
 }
 
-export default GamerWorld
+export default PopularSale

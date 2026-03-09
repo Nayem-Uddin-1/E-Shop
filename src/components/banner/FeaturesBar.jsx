@@ -5,10 +5,10 @@ import { MdOutlineEmojiEvents } from 'react-icons/md';
 const FeaturesBar = () => {
   return (
     <div className="max-w-full bg-white py-10 px-6 mt-10 ">
-      <div className="max-w-7xl mx-auto flex  sm:flex-col sm:items-center md:items-center   sm:gap-20 sm:p-10 md:flex-col lg:flex-row flex-wrap justify-between gap-6">
+      <div className="max-w-7xl mx-auto flex flex-col sm:items-center md:items-center gap-20 px-10 md:p-0 md:flex-col lg:flex-row flex-wrap justify-between md:gap-6 items-center">
         
         {/* Free Shipping */}
-        <div className="flex items-center gap-4 min-w-[200px]">
+        <div className="flex items-center gap-4  md:min-w-[200px]">
           <HiOutlineTruck className="text-[#f5a623] text-4xl" />
           <div>
             <h4 className="font-bold text-gray-900 text-sm">Free Shipping</h4>
@@ -17,7 +17,7 @@ const FeaturesBar = () => {
         </div>
 
         {/* Free Return */}
-        <div className="flex items-center gap-4 min-w-[200px]">
+        <div className="flex items-center gap-4  md:min-w-[200px]">
           <HiOutlineRefresh className="text-[#f5a623] text-4xl" />
           <div>
             <h4 className="font-bold text-gray-900 text-sm">Free Return</h4>
@@ -26,7 +26,7 @@ const FeaturesBar = () => {
         </div>
 
         {/* Secure Payment */}
-        <div className="flex items-center gap-4 min-w-[200px]">
+        <div className="flex items-center gap-4  md:min-w-[200px]">
           <HiOutlineShieldCheck className="text-[#f5a623] text-4xl" />
           <div>
             <h4 className="font-bold text-gray-900 text-sm">Secure Payment</h4>
@@ -35,7 +35,7 @@ const FeaturesBar = () => {
         </div>
 
         {/* Best Quality */}
-        <div className="flex items-center gap-4 min-w-[200px]">
+        <div className="flex items-center gap-4  md:min-w-[200px]">
           <MdOutlineEmojiEvents className="text-[#f5a623] text-4xl" />
           <div>
             <h4 className="font-bold text-gray-900 text-sm">Best Quality</h4>
