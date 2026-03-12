@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import img_two from "../../assets/images/imgi_95_section_category_1.jpg"
 import { useSelector } from 'react-redux';
+import Container from '../common/container/Container';
 
 
 
@@ -23,7 +24,7 @@ function PopularSale() {
 }
 
     return (
-        <div>
+        <Container>
 
             <div className='my-5 flex justify-between '>
                 <h2 className='text-3xl font-bold ' >Popular Sale</h2>
@@ -43,7 +44,7 @@ function PopularSale() {
             </div>
 
 
-        </div>
+        </Container>
     )
 }
 

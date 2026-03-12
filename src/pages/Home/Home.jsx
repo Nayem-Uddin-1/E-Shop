@@ -9,12 +9,13 @@ import TopSellingProducts from '../../components/TopSellProducts/TopSellingProdu
 import BestSaller from '../../components/BestSaller/BestSaller';
 import PromoBannerOne from '../../components/PromoBanners/PromoBannerOne';
 import PopularSale from '../../components/PopularSales/PopularSale';
+import NewsletterBanner from '../../components/NewsletterBanner/NewsletterBanner';
 
 
 
 function Home() {
   return (
-    <Container>
+    <>
        <Banner/>
        <GamerWorld/>
        <ShopBrand/>
@@ -23,9 +24,10 @@ function Home() {
        <BestSaller/>
        <PromoBannerOne/>
        <PopularSale/>
+       <NewsletterBanner/>
 
-       <div className='h-50'></div>
-    </Container>
+         
+    </>
   )
 }
 

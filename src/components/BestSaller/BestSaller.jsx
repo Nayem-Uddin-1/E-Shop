@@ -1,12 +1,13 @@
 import React from 'react'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import Container from '../common/container/Container';
 
 
 
 function BestSaller() {
     return (
-        <div>
+        <Container>
 
             <div className='my-5 flex  justify-between '>
                 <h2 className='text-3xl font-bold ' >Best Saller</h2>
@@ -42,7 +43,7 @@ function BestSaller() {
                 }
 
             </div>
-        </div>
+        </Container>
     )
 }
 

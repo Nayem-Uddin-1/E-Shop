@@ -3,6 +3,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import SellingProducts from '../products/SellingProducts';
 import { useSelector } from 'react-redux';
+import Container from '../common/container/Container';
 
 
 function TopSellingProducts() {
@@ -20,7 +21,8 @@ function TopSellingProducts() {
 }
 
   return (
-    <div className='mt-10'>
+   <Container>
+     <div className='mt-10'>
         
          <div className='my-5 flex justify-between '>
                 <h2 className='text-3xl font-bold ' >Top Selling Products</h2>
@@ -37,6 +39,7 @@ function TopSellingProducts() {
 
 
     </div>
+   </Container>
   )
 }
 

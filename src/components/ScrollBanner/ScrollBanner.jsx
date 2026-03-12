@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaChevronRight, FaApple, FaGooglePlay } from 'react-icons/fa';
+import Container from '../common/container/Container';
 
 const ScrollBanner = () => {
   return (
-    <div className="w-full flex gap-6 justify-between">
+  <Container>
+      <div className="w-full flex gap-6 justify-between">
       
       {/* Flash Sale Card */}
       <div className="flex-1 border bg-orange-50 p-8 relative overflow-hidden h-80 flex flex-col justify-between">
@@ -54,6 +56,7 @@ const ScrollBanner = () => {
       </div>
 
     </div>
+  </Container>
   );
 };
 

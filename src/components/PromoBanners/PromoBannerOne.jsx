@@ -1,6 +1,7 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import Container from '../common/container/Container';
 
 const PromoBannerOne = () => {
   const banners = [
@@ -25,7 +26,8 @@ const PromoBannerOne = () => {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row gap-6 bg-gray-50 font-sans mt-20">
+    <Container>
+      <div className="flex flex-col md:flex-row gap-6 bg-gray-50 font-sans mt-20">
       {banners.map((banner) => (
       <Link to={"/product/:slug"}
        key={banner.id}
@@ -68,6 +70,7 @@ const PromoBannerOne = () => {
         </Link>
       ))}
     </div>
+    </Container>
   );
 };
 

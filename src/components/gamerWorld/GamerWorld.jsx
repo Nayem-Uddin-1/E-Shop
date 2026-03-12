@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaLongArrowAltRight } from "react-icons/fa";
 import img_two from "../../assets/images/imgi_95_section_category_1.jpg"
 import { useSelector } from 'react-redux';
+import Container from '../common/container/Container';
 
 
 
@@ -23,9 +24,10 @@ function GamerWorld() {
 }
 
     return (
-        <div>
+        <Container>
 
-            <div className='my-5 flex justify-between '>
+          <div className='pt-12' >
+              <div className='my-5 flex justify-between'>
                 <h2 className='text-3xl font-bold ' >Gamer World</h2>
                 <Link to={"/shop"} target="_blank" className='flex justify-center gap-3 items-center  font-bold ' >
                 <span className="text-red-500 underline">
@@ -41,9 +43,10 @@ function GamerWorld() {
 
                 <Products prods={visibleProducts} />
             </div>
+          </div>
 
 
-        </div>
+        </Container>
     )
 }
 
