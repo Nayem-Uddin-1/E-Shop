@@ -43,7 +43,7 @@ function ShopBrand() {
        <Container>
             <div
       ref={sectionRef}
-      className={`brand-section pt-12 border transition-all duration-1000 ease-out
+      className={`brand-section pt-12 transition-all duration-1000 ease-out
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
       `}
     >

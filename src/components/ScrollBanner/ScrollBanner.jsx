@@ -5,10 +5,10 @@ import Container from '../common/container/Container';
 const ScrollBanner = () => {
   return (
   <Container>
-      <div className="w-full flex gap-6 justify-between">
+      <div className="w-full flex gap-6 justify-between my-10">
       
       {/* Flash Sale Card */}
-      <div className="flex-1 border bg-orange-50 p-8 relative overflow-hidden h-80 flex flex-col justify-between">
+      <div className="flex-1 bg-orange-50 p-8 relative overflow-hidden h-80 flex flex-col justify-between">
         <div className="flex gap-4">
           {['Days', 'Hours', 'Min', 'Sec'].map((label) => (
             <div key={label} className="text-center">
@@ -34,7 +34,7 @@ const ScrollBanner = () => {
       </div>
 
       {/* Mobile App Card */}
-      <div className="flex-1 border bg-slate-100 p-8 flex flex-col items-center text-center h-80 overflow-hidden">
+      <div className="flex-1 bg-slate-100 p-8 flex flex-col items-center text-center h-80 overflow-hidden">
         <p className="text-[10px] tracking-widest font-bold text-gray-400 mb-2 uppercase">Mobile App Version</p>
         <h2 className="text-2xl font-bold text-gray-900 leading-tight">
           Get Our <span className="text-red-500 underline decoration-2">Mobile App</span><br/>

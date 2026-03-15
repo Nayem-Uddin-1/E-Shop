@@ -1,3 +1,14 @@
+import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
+import img_two from "../../src/assets/images/imgi_57_product_2.jpg"
+import img_three from "../../src/assets/images/imgi_38_product_3.jpg"
+import img_4 from "../../src/assets/images/imgi_59_product_4.jpg"
+import img_5 from "../../src/assets/images/imgi_60_product_5.jpg"
+import img_6 from "../../src/assets/images/imgi_61_product_6.jpg"
+// import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
+// import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
+// import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
+
+
 export const Products = [
   {
     id: "1",
@@ -11,7 +22,7 @@ export const Products = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Apple",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut-300x300.png",
+      img_one,
       "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-2.jpg"
     ],
     rating: 4.8,
@@ -38,7 +49,7 @@ export const Products = [
     categories: ["Electronics", "Mobile Phones", "Smartphones"],
     brand: "Samsung",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut3-300x300.png",
+      img_two,
       "https://example.com/images/galaxy-s24-ultra-2.jpg"
     ],
     rating: 4.7,
@@ -65,7 +76,7 @@ export const Products = [
     categories: [ "Electronics"],
     brand: "Nike",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut6-300x300.png",
+      img_three,
       "https://example.com/images/nike-pegasus-2.jpg"
     ],
     rating: 4.6,
@@ -92,7 +103,7 @@ export const Products = [
     categories: ["Electronics", "Headphones"],
     brand: "Sony",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut5-300x300.png",
+      img_4,
       "https://example.com/images/sony-wh1000xm5-2.jpg"
     ],
     rating: 4.9,
@@ -119,7 +130,7 @@ export const Products = [
     categories: ["Electronics", "Computers",],
     brand: "Apple",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut2-300x300.png",
+      img_5,
       "https://example.com/images/macbook-pro-16-2.jpg"
     ],
     rating: 4.9,
@@ -146,7 +157,7 @@ export const Products = [
     categories: ["Electronics"],
     brand: "Adidas",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2021/11/prodcut4-300x300.png",
+      img_6,
       "https://example.com/images/adidas-ultraboost-2.jpg"
     ],
     rating: 4.7,

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-/* Using Ionicons from react-icons for a clean, consistent stroke weight */
 import {
   IoSyncOutline,
   IoHeartOutline,
@@ -8,7 +7,6 @@ import {
   IoChevronDownOutline
 } from 'react-icons/io5';
 import { FaBarsStaggered } from "react-icons/fa6";
-
 
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
@@ -19,10 +17,7 @@ const Header = () => {
   const [authOpen, setAuthOpen] = useState(false);
   const [categoryOpen, setCategoryOpen] = useState(false);
 
-
   const categoryRef = useRef(null);
-  const authRef = useRef(null);
-
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -33,38 +28,42 @@ const Header = () => {
       ) {
         setCategoryOpen(false);
       }
-
-
     };
 
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [categoryOpen, authOpen]);
-
+  }, [categoryOpen]);
 
   const cartProds = useSelector((state => state.cart.cartItems))
+  const products = useSelector((state => state.product.products))
 
+  const [search, setSearch] = useState("");
 
-
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <header ref={categoryRef} className="max-w-full relative bg-white py-5 px-4 md:px-10 border-b border-gray-100 font-sans">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-             
-          <FaBarsStaggered className='md:hidden'/>
-        {/* Logo Section */}
+        <FaBarsStaggered className='md:hidden' />
+
+        {/* Logo */}
         <Logo />
 
-        {/* Search Bar Container */}
-        <div className="hidden lg:flex flex-1 max-w-[700px] h-12 border-2 border-[#FFB433] rounded-sm overflow-hidden">
+        {/* Search Section */}
+        <div className="hidden lg:flex relative flex-1 max-w-[700px] h-12 border-2 border-[#FFB433] rounded-sm overflow-visible">
+
           <input
             type="text"
             placeholder="Search Product..."
             className="flex-1 px-5 outline-none text-sm text-gray-500"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
           />
 
           <div className="flex items-center gap-10 px-4 border-l border-gray-200 cursor-pointer group">
@@ -75,13 +74,40 @@ const Header = () => {
           <button className="bg-[#FFB433] px-10 h-full text-sm font-bold text-[#001730] hover:bg-[#e6a22e] transition-all">
             Search
           </button>
+
+          {/* SEARCH RESULT DROPDOWN */}
+          {search && filteredProducts.length > 0 && (
+            <div className="absolute top-14 left-0 w-full bg-white shadow-lg border-gry-300 z-50 max-h-80 overflow-y-auto">
+
+              {filteredProducts.slice(0, 5).map((item) => (
+                <Link
+                  key={item.id}
+                  to={`/product/${item.slug}`}
+                  onClick={() => setSearch("")}
+                  className="flex items-center gap-3 p-3 hover:bg-gray-100 border-b border-gray-300"
+                >
+                  <img
+                    src={item.images[0]}
+                    alt={item.name}
+                    className="w-10 h-10 object-cover"
+                  />
+
+                  <div>
+                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-xs text-gray-500">${item.finalPrice}</p>
+                  </div>
+
+                </Link>
+              ))}
+
+            </div>
+          )}
+
         </div>
 
-        {/* Icons Group */}
+        {/* Icons */}
         <div className="flex items-center gap-8">
 
-
-          {/* Refresh Icon */}
           <div className="relative group cursor-pointer hidden md:block">
             <IoSyncOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
@@ -89,7 +115,6 @@ const Header = () => {
             </span>
           </div>
 
-          {/* Wishlist Icon */}
           <div className="relative group cursor-pointer hidden md:block ">
             <IoHeartOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
             <span className="absolute -top-2 -right-2 bg-[#FFB433] text-[11px] font-bold w-5 h-5 flex items-center justify-center rounded-full text-[#001730]">
@@ -97,7 +122,6 @@ const Header = () => {
             </span>
           </div>
 
-          {/* Cart Icon */}
           <div className="relative group cursor-pointer">
             <Link to={"/carts"} >
               <IoBagHandleOutline size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
@@ -107,17 +131,13 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* User Icon */}
           <div className="group cursor-pointer hidden md:block ">
             <IoPersonOutline onClick={(() => setAuthOpen(!authOpen))} size={30} className="text-[#001730] group-hover:text-[#FFB433] transition-colors" />
           </div>
 
-
         </div>
 
       </div>
-
-
     </header>
   );
 };

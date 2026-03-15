@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
 import { FaStar } from "react-icons/fa";
-import img_one from "../../assets/images/imgi_3_product_img_1.jpg"
 import ProductsAvailableCount from './ProductsAvailableCount';
-import img_two from "../../assets/images/imgi_95_section_category_1.jpg"
-
 import ProductsOverlay from './ProductsOverlay';
 import { Link } from 'react-router-dom';
 
 
 
-function Products({ prods, type }) {
+function Products({ prods, type ,img }) {
 
   const [available, setAvailable] = useState(true)
 
@@ -17,15 +14,17 @@ function Products({ prods, type }) {
 
 
   return (
-    <div className={`grid  lg:grid-cols-4 gap-20 grid-cols-2  md:grid-cols-2 
-    ${type === "related" ? "lg:grid-cols-4" : ""} `}>
+    <div className={`grid gap-15 lg:grid-cols-3  grid-cols-2  md:grid-cols-2 
+    ${type === "related" ? "lg:grid-cols-4" : ""} ${type === "home" ? "lg:grid-cols-4" : ""} `}>
 
       {/* promo-banner */}
-      <div className=" w-[270px] hidden lg:block "  >
-        <div className='flex flex-col items-center justify-center '>
-          <img src={img_two} alt={"one"} />
+         {type === "home" && (
+        <div className="w-[270px] hidden lg:block">
+          <div className="flex flex-col items-center justify-center">
+            <img src={img} alt="banner" />
+          </div>
         </div>
-      </div>
+      )}
       {
         prods?.map((item, i) => (
 

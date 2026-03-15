@@ -2,9 +2,9 @@ import React from 'react'
 import Products from '../products/Products'
 import { Link } from 'react-router-dom'
 import { FaLongArrowAltRight } from "react-icons/fa";
-import img_two from "../../assets/images/imgi_95_section_category_1.jpg"
 import { useSelector } from 'react-redux';
 import Container from '../common/container/Container';
+import popular_sale from "../../assets/images/Popular_Sale_Banner.jpg"
 
 
 
@@ -40,7 +40,7 @@ function PopularSale() {
             <div className='flex justify-between gap-10  ' >
               
 
-                <Products prods={visibleProducts} />
+                <Products prods={visibleProducts} type={"home"} img={popular_sale} />
             </div>
 
 
