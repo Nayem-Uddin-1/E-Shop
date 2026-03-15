@@ -72,7 +72,7 @@ const Footer = () => {
               <a href="#" className="hover:text-yellow-500 transition-colors"><FaYoutube size={20} /></a>
             </div>
             <p className="text-gray-400 text-sm">
-              ©{currentYear} <span className="font-bold text-gray-800">Quomodosoft</span> All rights reserved
+              ©{currentYear} <span className="font-bold text-gray-800">Nayem.dev</span> All rights reserved
             </p>
           </div>
 
