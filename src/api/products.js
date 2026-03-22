@@ -4,7 +4,11 @@ import img_three from "../../src/assets/images/imgi_38_product_3.jpg"
 import img_4 from "../../src/assets/images/imgi_59_product_4.jpg"
 import img_5 from "../../src/assets/images/imgi_60_product_5.jpg"
 import img_6 from "../../src/assets/images/imgi_61_product_6.jpg"
-// import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
+import img_7 from "../../src/assets/images/imgi_62_product_7.jpg"
+import img_8 from "../../src/assets/images/imgi_63_product-img_8.jpg"
+import img_9 from "../../src/assets/images/imgi_40_product_9.jpg"
+import img_10 from "../../src/assets/images/imgi_65_product_10.jpg"
+import img_11 from "../../src/assets/images/imgi_68_product_img_11.jpg"
 // import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
 // import img_one from "../../src/assets/images/imgi_3_product_img_1.jpg"
 
@@ -73,7 +77,7 @@ export const Products = [
     discount: 5,
     finalPrice: 142.5,
     stock: 120,
-    categories: [ "Electronics"],
+    categories: ["Electronics"],
     brand: "Nike",
     images: [
       img_three,
@@ -174,17 +178,17 @@ export const Products = [
   },
   {
     id: "7",
-    name: "Logitech MX Master 3 Mouse",
-    slug: "logitech-mx-master-3-mouse",
+    name: "Kenegy consectetur id ex nulla in adipisicing deserunt",
+    slug: "kenegy-consectetur-id-ex-nulla-in-adipisicing-deserunt",
     description: "Advanced wireless mouse with ergonomic design, customizable buttons, and long battery life.",
-    price: 100,
+    price: 26.23,
     discount: 15,
-    finalPrice: 85,
+    finalPrice: 11.92,
     stock: 60,
     categories: ["Electronics",],
     brand: "Logitech",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
+      img_7,
       "https://example.com/images/logitech-mx-2.jpg"
     ],
     rating: 4.8,
@@ -201,17 +205,17 @@ export const Products = [
   },
   {
     id: "8",
-    name: "Canon EOS R6 Camera",
-    slug: "canon-eos-r6-camera",
+    name: "Bizmatic consequat enim quis sit et est eiusmod",
+    slug: "bizmatic-consequat-enim-quis-sit-et-est-eiusmod",
     description: "Mirrorless full-frame camera with 20MP sensor, 4K video, and fast autofocus.",
     price: 2500,
     discount: 5,
     finalPrice: 2375,
     stock: 15,
-    categories: ["Electronics",],
-    brand: "Canon",
+    categories: ["Gaming Entertainment",],
+    brand: "Apple",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/tabsamg-300x300.png",
+      img_8,
       "https://example.com/images/canon-eos-r6-2.jpg"
     ],
     rating: 4.9,
@@ -228,17 +232,17 @@ export const Products = [
   },
   {
     id: "9",
-    name: "Samsung QLED 65-inch TV",
-    slug: "samsung-qled-65-tv",
+    name: "Anarco consectetur magna nostrud commodo tempor",
+    slug: "anarco-consectetur-magna-nostrud-commodo-tempor",
     description: "65-inch QLED 4K Smart TV with HDR10+, Quantum Processor, and smart apps.",
     price: 1200,
     discount: 10,
     finalPrice: 1080,
     stock: 25,
-    categories: ["Electronics", "Televisions"],
+    categories: ["Gaming Entertainment", "Electronics"],
     brand: "Samsung",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/ipadgreen-300x300.png",
+      img_9,
       "https://example.com/images/samsung-qled-2.jpg"
     ],
     rating: 4.7,
@@ -255,17 +259,17 @@ export const Products = [
   },
   {
     id: "10",
-    name: "Bose SoundLink Revolve+ Speaker",
-    slug: "bose-soundlink-revolve-plus",
+    name: "Plasto cillum ad minim elit fugiat esse dolore",
+    slug: "plasto-cillum-ad-minim-elit-fugiat-esse-dolore",
     description: "Portable Bluetooth speaker with 360-degree sound, water-resistant, 16 hours battery life.",
     price: 300,
     discount: 10,
     finalPrice: 270,
     stock: 45,
-    categories: ["Electronics", "Speakers"],
+    categories: ["Gaming Entertainment", "Speakers"],
     brand: "Bose",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/appipad-300x300.png",
+      img_10,
       "https://example.com/images/bose-revolve-2.jpg"
     ],
     rating: 4.8,
@@ -282,17 +286,17 @@ export const Products = [
   },
   {
     id: "11",
-    name: "Dell XPS 13 Laptop",
-    slug: "dell-xps-13-laptop",
+    name: "Conjurica ea magna eiusmod esse cupt anim",
+    slug: "conjurica-ea-magna-eiusmod-esse-cupt-anim",
     description: "Dell XPS 13 with Intel i7, 16GB RAM, 512GB SSD, 13.4-inch InfinityEdge display.",
     price: 1500,
     discount: 5,
     finalPrice: 1425,
     stock: 35,
-    categories: ["Electronics",],
+    categories: ["Gaming Entertainment",],
     brand: "Dell",
     images: [
-      "https://electro.madrasthemes.com/wp-content/uploads/2016/03/GoldPhone-1-300x300.png",
+      img_11,
       "https://example.com/images/dell-xps-13-2.jpg"
     ],
     rating: 4.7,
