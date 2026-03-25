@@ -1,74 +1,56 @@
-// src/components/PriceRange.jsx
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 
-export default function PriceRange() {
-  const minLimit = 0;
-  const maxLimit = 2000;
+function PriceRange({ priceRange, setPriceRange }) {
 
-  const [minPrice, setMinPrice] = useState(200);
-  const [maxPrice, setMaxPrice] = useState(670);
-
-  const minRef = useRef(null);
-  const maxRef = useRef(null);
-
-  
   const handleMinChange = (e) => {
-    const value = Math.min(Number(e.target.value), maxPrice - 1);
-    setMinPrice(value);
+    const value = Number(e.target.value);
+
+    // prevent negative
+    if (value < 0) return;
+
+    // auto fix max if needed
+    setPriceRange([value, Math.max(value, priceRange[1])]);
   };
 
-   
   const handleMaxChange = (e) => {
-    const value = Math.max(Number(e.target.value), minPrice + 1);
-    setMaxPrice(value);
+    const value = Number(e.target.value);
+
+    // prevent negative
+    if (value < 0) return;
+
+    // auto fix min if needed
+    setPriceRange([Math.min(value, priceRange[0]), value]);
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-lg font-semibold mb-4">Price Range</h2>
+    <div className="mt-6 px-5">
+      <h2 className="font-semibold mb-4">Price Range</h2>
 
-      <div className="relative h-6 mb-4">
-        {/* Track */}
-        <div className="absolute w-full h-2 bg-gray-300 rounded-lg top-2"></div>
+      <div className="flex gap-2">
 
-        {/* Selected range */}
-        <div
-          className="absolute h-2 bg-yellow-400 rounded-lg top-2"
-          style={{
-            left: `${(minPrice / maxLimit) * 100}%`,
-            width: `${((maxPrice - minPrice) / maxLimit) * 100}%`,
-          }}
-        ></div>
-
-        {/* Min Slider */}
         <input
-          type="range"
-          min={minLimit}
-          max={maxLimit}
-          value={minPrice}
-          ref={minRef}
+          type="number"
+          value={priceRange[0]}
           onChange={handleMinChange}
-          className="absolute w-full h-2 appearance-none bg-transparent pointer-events-none"
-          style={{ zIndex: 2 }}
+          placeholder="Min"
+          className="border p-2 w-1/2"
         />
 
-        {/* Max Slider */}
         <input
-          type="range"
-          min={minLimit}
-          max={maxLimit}
-          value={maxPrice}
-          ref={maxRef}
+          type="number"
+          value={priceRange[1]}
           onChange={handleMaxChange}
-          className="absolute w-full h-2 appearance-none bg-transparent pointer-events-none"
-          style={{ zIndex: 3 }}
+          placeholder="Max"
+          className="border p-2 w-1/2"
         />
+
       </div>
 
-      {/* Display selected price */}
-      <div className="text-gray-700 font-medium">
-        Price: ${minPrice} - ${maxPrice}
-      </div>
+      <p className="text-sm text-gray-500 mt-2">
+        ${priceRange[0]} - ${priceRange[1]}
+      </p>
     </div>
   );
 }
+
+export default PriceRange;

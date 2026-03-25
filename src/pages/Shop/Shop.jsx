@@ -7,46 +7,67 @@ import BrandList from "./BrandList";
 import Breadcrumbs from "./Breadcrumbs";
 import Container from "../../components/common/container/Container";
 
-
 export default function Shop() {
 
-
-  const prods = useSelector((state => state.product.products))
+  const prods = useSelector((state) => state.product.products);
 
   const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedBrands, setSelectedBrands] = useState([]);
+  const [priceRange, setPriceRange] = useState([0, 2000]);
 
-  const filteredProducts = selectedCategories.length === 0
-    ? prods
-    : prods.filter(product =>
-      product.categories.some(cat => selectedCategories.includes(cat))
-    );
+  // ✅ Combined Filter Logic (Category + Brand + Price ready)
+  const filteredProducts = prods.filter((product) => {
 
+    const categoryMatch =
+      selectedCategories.length === 0 ||
+      product.categories.some((cat) =>
+        selectedCategories.includes(cat)
+      );
 
+    const brandMatch =
+      selectedBrands.length === 0 ||
+      selectedBrands.includes(product.brand);
 
+    const priceMatch =
+      product.price >= priceRange[0] &&
+      product.price <= priceRange[1];
+
+    return categoryMatch && brandMatch && priceMatch;
+  });
 
   return (
-
     <Container>
       <Breadcrumbs />
-      <div className="max-w-7xl mx-auto px-4 flex gap-8  ">
 
+      <div className="flex gap-20 mb-10">
 
         {/* Sidebar */}
-        <aside className="w-64 p-4 bg-white">
+        <aside className="w-64 p-4 h-3/4 bg-white">
+
           <CategoryList
             prods={prods}
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
           />
-          <PriceRange className="z-1000000" />
-          <BrandList prods={prods} />
-        </aside>
-        {/* Products */}
-        <Products prods={prods} />
 
+          <BrandList
+            prods={prods}
+            selectedBrands={selectedBrands}
+            setSelectedBrands={setSelectedBrands}
+          />
+
+          {/* Optional (ready for future use) */}
+          {/* <PriceRange
+            priceRange={priceRange}
+            setPriceRange={setPriceRange}
+          /> */}
+
+        </aside>
+
+        {/* Products */}
+        <Products prods={filteredProducts} />
 
       </div>
     </Container>
-
   );
 }

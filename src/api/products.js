@@ -16,14 +16,14 @@ import img_11 from "../../src/assets/images/imgi_68_product_img_11.jpg"
 export const Products = [
   {
     id: "1",
-    name: "Notebook Widescreen",
-    slug: "apple-iphone-15-pro",
+    name: "Xoggle aute et pariatur adipisicing nostrud",
+    slug: "xoggle-aute-et-pariatur-adipisicing-nostrud",
     description: "Latest Apple iPhone 15 Pro with A17 Bionic chip, 6.1-inch display, and 48MP camera.",
     price: 1200,
     discount: 10,
     finalPrice: 1080,
     stock: 50,
-    categories: ["Electronics", "Mobile Phones", "Smartphones"],
+    categories: ["Electronics", "Gaming Entertainment",],
     brand: "Apple",
     images: [
       img_one,
@@ -43,15 +43,15 @@ export const Products = [
   },
   {
     id: "2",
-    name: "Samsung Galaxy S24 Ultra",
-    slug: "samsung-galaxy-s24-ultra",
+    name: "Geeky ipsum esse repreh est consequat",
+    slug: "geeky-ipsum-esse-repreh-est-consequat",
     description: "Samsung Galaxy S24 Ultra with 200MP camera, Snapdragon 8 Gen 3, and 5000mAh battery.",
     price: 1100,
     discount: 15,
     finalPrice: 935,
     stock: 30,
-    categories: ["Electronics", "Mobile Phones", "Smartphones"],
-    brand: "Samsung",
+    categories: ["Electronics", "Gaming Entertainment",],
+    brand: "Apple",
     images: [
       img_two,
       "https://example.com/images/galaxy-s24-ultra-2.jpg"
@@ -70,15 +70,15 @@ export const Products = [
   },
   {
     id: "3",
-    name: "Nike Air Zoom Pegasus 40",
-    slug: "nike-air-zoom-pegasus-40",
+    name: "Conjurica ea magna eiusmod esse cupt anim",
+    slug: "conjurica-ea-magna-eiusmod-esse-cupt-anim",
     description: "Comfortable running shoes with breathable mesh, responsive cushioning, and sleek design.",
     price: 150,
     discount: 5,
     finalPrice: 142.5,
     stock: 120,
-    categories: ["Electronics"],
-    brand: "Nike",
+    categories: ["Electronics","Gaming Entertainment"],
+    brand: "Apple",
     images: [
       img_three,
       "https://example.com/images/nike-pegasus-2.jpg"
@@ -97,15 +97,15 @@ export const Products = [
   },
   {
     id: "4",
-    name: "Sony WH-1000XM5 Headphones",
-    slug: "sony-wh-1000xm5-headphones",
+    name: "Senmei ipsum dolore eiusmod dolor officia do nisi",
+    slug: "senmei-ipsum-dolore-eiusmod-dolor-officia-do-nisi",
     description: "Industry-leading noise-canceling wireless headphones with up to 30 hours battery life.",
     price: 400,
     discount: 20,
     finalPrice: 320,
     stock: 70,
-    categories: ["Electronics", "Headphones"],
-    brand: "Sony",
+    categories: ["Electronics", "Laptops"],
+    brand: "Apple",
     images: [
       img_4,
       "https://example.com/images/sony-wh1000xm5-2.jpg"
@@ -124,14 +124,14 @@ export const Products = [
   },
   {
     id: "5",
-    name: "MacBook Pro 16-inch M3",
-    slug: "macbook-pro-16-m3",
-    description: "Apple MacBook Pro 16-inch with M3 chip, 32GB RAM, and 1TB SSD.",
+    name: "Canopoly duis voluptate dolor sunt sit adipisicing in",
+    slug: "canopoly-duis-voluptate-dolor-sunt-sit-adipisicing-in",
+    description: "Sumsung MacBook Pro 16-inch with M3 chip, 32GB RAM, and 1TB SSD.",
     price: 3500,
     discount: 5,
     finalPrice: 3325,
     stock: 20,
-    categories: ["Electronics", "Computers",],
+    categories: ["Electronics",],
     brand: "Apple",
     images: [
       img_5,
@@ -151,15 +151,15 @@ export const Products = [
   },
   {
     id: "6",
-    name: "Adidas Ultraboost 23",
-    slug: "adidas-ultraboost-23",
+    name: "Unisure aliqua repreh ex cupt qui elit officia",
+    slug: "unisure-aliqua-repreh-ex-cupt-qui-elit-officia",
     description: "High-performance running shoes with energy-returning Boost midsole and breathable knit upper.",
     price: 180,
     discount: 10,
     finalPrice: 162,
     stock: 100,
     categories: ["Electronics"],
-    brand: "Adidas",
+    brand: "Sumsung",
     images: [
       img_6,
       "https://example.com/images/adidas-ultraboost-2.jpg"
@@ -186,7 +186,7 @@ export const Products = [
     finalPrice: 11.92,
     stock: 60,
     categories: ["Electronics",],
-    brand: "Logitech",
+    brand: "Amazon",
     images: [
       img_7,
       "https://example.com/images/logitech-mx-2.jpg"
@@ -239,8 +239,8 @@ export const Products = [
     discount: 10,
     finalPrice: 1080,
     stock: 25,
-    categories: ["Gaming Entertainment", "Electronics"],
-    brand: "Samsung",
+    categories: ["Gaming Entertainment", "Electronics","Headphones"],
+    brand: "Apple",
     images: [
       img_9,
       "https://example.com/images/samsung-qled-2.jpg"
@@ -266,8 +266,8 @@ export const Products = [
     discount: 10,
     finalPrice: 270,
     stock: 45,
-    categories: ["Gaming Entertainment", "Speakers"],
-    brand: "Bose",
+    categories: ["Gaming Entertainment",],
+    brand: "Apple",
     images: [
       img_10,
       "https://example.com/images/bose-revolve-2.jpg"
@@ -294,7 +294,7 @@ export const Products = [
     finalPrice: 1425,
     stock: 35,
     categories: ["Gaming Entertainment",],
-    brand: "Dell",
+    brand: "Samsung",
     images: [
       img_11,
       "https://example.com/images/dell-xps-13-2.jpg"
@@ -320,7 +320,7 @@ export const Products = [
     discount: 10,
     finalPrice: 720,
     stock: 40,
-    categories: ["Electronics", "Mobile Phones", "Smartphones"],
+    categories: ["Electronics", "Mobile Phones",],
     brand: "Google",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/redPhone-300x300.png",
@@ -347,7 +347,7 @@ export const Products = [
     discount: 5,
     finalPrice: 171,
     stock: 90,
-    categories: ["Electronics",],
+    categories: ["Mobile Phones","Electronics",],
     brand: "Google",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/one1plus-300x300.png",
@@ -374,8 +374,8 @@ export const Products = [
     discount: 0,
     finalPrice: 500,
     stock: 25,
-    categories: ["Electronics",],
-    brand: "Sony",
+    categories: ["Mobile Phones","Electronics",],
+    brand: "Amazon",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/sam2-300x300.png",
       "https://example.com/images/ps5-2.jpg"
@@ -401,7 +401,7 @@ export const Products = [
     discount: 10,
     finalPrice: 54,
     stock: 80,
-    categories: ["Electronics", "Speakers"],
+    categories: ["Electronics",],
     brand: "Amazon",
     images: [
       "https://electro.madrasthemes.com/wp-content/uploads/2016/03/lgphone-300x300.png",

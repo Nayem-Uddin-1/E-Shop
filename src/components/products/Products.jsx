@@ -14,7 +14,7 @@ function Products({ prods, type ,img }) {
 
 
   return (
-    <div className={`grid gap-15 lg:grid-cols-3  grid-cols-2  md:grid-cols-2 
+    <div className={`grid gap-20 lg:grid-cols-3  grid-cols-2  md:grid-cols-2 
     ${type === "related" ? "lg:grid-cols-4" : ""} ${type === "home" ? "lg:grid-cols-4" : ""} `}>
 
       {/* promo-banner */}
@@ -28,7 +28,7 @@ function Products({ prods, type ,img }) {
       {
         prods?.map((item, i) => (
 
-          <div className="w-67.5 bg-white px-6 pb-6 overflow-hidden relative group transition-shadow duration-300 hover:shadow-lg">
+          <div className="w-67.5 h-110 bg-white px-6 pb-6 overflow-hidden relative group transition-shadow duration-300 hover:shadow-lg">
 
             {/* Stock badge */}
             <div className="w-full h-15 max-w-xs">
@@ -50,7 +50,7 @@ function Products({ prods, type ,img }) {
                 <FaStar className="text-yellow-500" />
                 {item.rating}
               </div>
-              <Link to={`/product/${item.slug}`} target='_black' className="text-sm font-bold hover:text-blue-700 cursor-pointer ">{item.name}</Link>
+              <Link to={`/shop/product/${item.slug}`} target='_black' className="text-sm font-bold hover:text-blue-700 cursor-pointer ">{item.name}</Link>
               <div className="flex gap-3 font-bold">
                 <del className="text-gray-400">{item.price}</del>
                 <span>{item.finalPrice}</span>

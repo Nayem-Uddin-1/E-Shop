@@ -76,7 +76,7 @@ function ProductsOverlay({ prods ,type}) {
         "
             >
                 <Link 
-                to={`product/${prods.slug}`}
+                to={`/shop/product/${prods.slug}`}
                 className="w-12 h-12 bg-gray-50 border border-gray-500 flex justify-center items-center rounded   transition">
                     <LuFullscreen className='text-xl' />
                 </Link>
